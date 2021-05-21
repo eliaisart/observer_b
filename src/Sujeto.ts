@@ -1,10 +1,10 @@
 import { Observador } from "./Observador.js";
-import { Vehiculo } from "./Vehiculo.js";
 
 export abstract class Sujeto{
     protected array = new Array<Observador>();
-
-    agrega(elementos: Vehiculo){
+    protected aux: Observador;
+    
+    agrega(elementos: Observador){
         this.array.push(elementos)
     }
 
@@ -13,6 +13,6 @@ export abstract class Sujeto{
     }
 
     notifica(){
-
+        this.aux.actualiza();
     }
 }

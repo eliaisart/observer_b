@@ -6,17 +6,24 @@ export class VistaVehiculo implements Observador{
     protected vehic: Vehiculo;
     protected desc_text: string;    //mostrara descripcion y precio
     
-    constructor(){
+    protected array = Array<Observador>();
+
+    constructor(vehic: Vehiculo){
+        
         //asignara un vehiculo a la propiedad de vehiculo de la clase
-        //agrega el contenido de la clase array de observadores 
-        //llamara al metodo actualizaTexo() definido en VistaVehiculo
+        vehic = new Vehiculo();
+
+        //agrega el contenido de la clase al array de observadores 
+        this.array.push(vehic);
+
+        //llamara al metodo actualizaTexto() definido en VistaVehiculo
+        this.actualizaTexto();
     }
 
     actualizaTexto(){
-        //actualiza propiedad texto de la clase para asignar descripcion y precio del vehiculo
-        let vehiculo = new Vehiculo();
-    
-        this.desc_text = Vehiculo.arguments;
+        //actualiza propiedad texto (desc_text) de la clase para asignar descripcion y precio del vehiculo
+        
+        this.desc_text  
         
         /*
         NO ESTA 
