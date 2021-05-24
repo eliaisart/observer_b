@@ -18,16 +18,20 @@ export class VistaVehiculo implements Observador{
 
         //llamara al metodo actualizaTexto() definido en VistaVehiculo
         this.actualizaTexto();
+
+
+        //PREGUNTAR
     }
 
     actualizaTexto(){
         //actualiza propiedad texto (desc_text) de la clase para asignar descripcion y precio del vehiculo
         
-        this.desc_text  
+        let new_desc = this.vehic.getDescripcion();
+        let new_precio = this.vehic.getPrecio();
+        this.desc_text = new_desc + new_precio;
+        return this.desc_text;
         
-        /*
-        NO ESTA 
-        */
+        //PREGUNTAR 
     }
 
     actualiza(){
