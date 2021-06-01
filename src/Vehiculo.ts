@@ -16,12 +16,12 @@ export class Vehiculo extends Sujeto{
     }
 
     setDescripcion(desc: string){
-        desc = this.descripcion;
-        this.aux.actualiza();
+        this.descripcion = desc;
+        this.notifica();
     }
 
     setPrecio(prec: number){
-        prec = this.precio;
-        this.aux.actualiza();
+        this.precio = prec;
+        this.notifica();
     }
 }

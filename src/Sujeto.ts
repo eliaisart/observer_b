@@ -13,6 +13,9 @@ export abstract class Sujeto{
     }
 
     notifica(){
-        this.aux.actualiza();
+        //this.aux.actualiza();
+        for(let i = 0; i < this.array.length; i++ ){
+            this.array[i].actualiza();
+        }
     }
 }
